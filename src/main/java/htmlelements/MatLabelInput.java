@@ -38,10 +38,4 @@ public class MatLabelInput extends HtmlElement {
                 .replaceAll(" ","").replaceAll(",",".");
         return Double.parseDouble(result);
     }
-
-    public void invertValue(double max, double min) {
-        double value = getValue();
-        double newValue = value > 0 ? value - max : value + min;
-        setText(String.valueOf(newValue));
-    }
 }
